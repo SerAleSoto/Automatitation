@@ -1,0 +1,13 @@
+name: Workflow-Push
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ejecutar:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Mensaje
+        run: echo "Workflow activado por push"

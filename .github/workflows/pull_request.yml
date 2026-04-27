@@ -1,0 +1,13 @@
+name: Workflow-PullRequest
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  ejecutar:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Mensaje
+        run: echo "Pull request detectado"

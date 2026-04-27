@@ -1,0 +1,13 @@
+name: Workflow-IssueComment
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  ejecutar:
+    if: github.event.issue.pull_request != null
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Mensaje
+        run: echo "Comentario en PR detectado"
